@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Reed Fisher">
+
+    <title>Crystal Collector</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/game.js"></script>
+    <!-- Bootstrap core CSS -->
+    <!-- <script src="_assets/js/reset.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Custom styles for this page -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/reset.css" rel="stylesheet">
+
+	<script language="javascript">
+		$(document).ready(function() {
+		
+			document.getElementById('randomnumber').value = getit();
+			var crystal = document.getElementsByClassName("diamond"); // generates four random numbers and assigns them to the four buttons
+			$.each(crystal, function () {
+			  var random = Math.floor(Math.random() * 11) + 1;
+			  $(this).attr(
+				//"data-random": random()
+				"value", random
+			  );
+			});
+		 });
+	
+	</script>
+</head>
+
+<body >
+
+    <div class="div class header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Game Rules</h1>
+        <p class="lead">You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
+            score.</p>
+        <p>You win the game by matching your total score exactly to the random number.</p>
+        <p>The value of each crystal is hidden from you until you click it.</p>
+        <p>Each time the game starts, the random number and the value of each crystal will change.</p>
+    </div>
+
+    <div class="container">  
+        <div class="row">
+            <div class="col-lg mx-auto text-center"><p><b>Your random number:</b></p>
+            <p class="col-lg mx-auto text-center"><div id="randomnumber"></div></p>
+            </div>
+            <div class="col-lg mx-auto text-center"><p><b>Your score:</b></p>
+            <p class="col-lg mx-auto text-center"><div id="theTotal">0</div></p>
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"><button value=val type="button" class="diamond btn btn-lg btn-block btn-primary" id="turq" onclick="updatetotal(this);"><img src="assets/images/diamond_sapphire-2-170.png"></button></div>
+            <div class="col-sm"><button value=val type="button" class="diamond btn btn-lg btn-block btn-primary" id="pink" onclick="updatetotal(this);" ><img src="assets/images/magenta_crystal-170.png"></button></div>
+            <div class="col-sm"><button value=val type="button" class="diamond btn btn-lg btn-block btn-primary" id="blue" onclick="updatetotal(this);"><img src="assets/images/minerals_blue_stone-170.png"></button></div>
+            <div class="col-sm"><button value=val type="button" class="diamond btn btn-lg btn-block btn-primary" id="ruby" onclick="updatetotal(this);"><img src="assets/images/ruby-gemstone-icon-png-170.png"></button></div>
+        </div>
+        <div class="row">
+                <div class="col-lg mx-auto text-center"><div id="startOver"><a onclick="window.location.href=this">Click to start a new game</a></div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+    <!-- <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+        Holder.addTheme('thumb', {
+            bg: '#55595c',
+            fg: '#eceeef',
+            text: 'Thumbnail'
+        });
+    </script> -->
+</body>
+
+</html>

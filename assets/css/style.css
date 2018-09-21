@@ -1,0 +1,33 @@
+html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  #randomnumber {
+    font-size: 80px;
+  }
+
+  #theTotal {
+    font-size: 80px;
+  }
+
+  #startOver {
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .card-deck .card {
+    min-width: 220px;
+  }
+  
+  .btn-group-lg>.btn, .btn-lg {
+    border-radius: 2rem !important;
